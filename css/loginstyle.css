@@ -1,0 +1,145 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* Reset and general styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Section styling */
+section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#ebe9ed, rgb(28, 25, 29), #000);
+  animation: animate 5s linear infinite;
+}
+
+/* Signin form styling */
+.signin {
+  width: 400px;
+  background-color: #141313;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
+}
+.signin:hover {
+  background-color: rgba(157, 159, 160, 0.04);
+}
+
+
+.signin .content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.signin .content h2 {
+  font-size: 2em;
+  color: #949494;
+  
+}
+
+.signin .content .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.signin .content .form .inputBox {
+  position: relative;
+  width: 100%;
+}
+
+.signin .content .form .inputBox input {
+  width: 100%;
+  background: #2d2a2a;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.signin .content .form .inputBox i {
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #777575;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+/* animation */
+.signin .content .form .inputBox input:focus ~ i,
+.signin .content .form .inputBox input:valid ~ i {
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #fff;
+}
+
+.signin .content .form .links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.signin .content .form .links a {
+  color: #615f62;
+  text-decoration: none;
+}
+
+.signin .content .form .links a:nth-child(2) {
+  color: #615f62;
+  font-weight: 600;
+}
+
+.signin .content .form .inputBox input[type="submit"] {
+  padding: 10px;
+  background: #615f62;
+  color: #000000;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+/* click */
+ input[type="submit"]:active {
+  opacity: 0.6;
+} 
+
+/* Media Queries */
+@media (max-width: 900px) {
+  /* Adjustments for smaller screens if needed */
+}
+
+@media (max-width: 600px) {
+  /* Further adjustments for even smaller screens if needed */
+}
